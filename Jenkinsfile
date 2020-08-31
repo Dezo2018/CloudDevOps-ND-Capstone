@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build start') {
+            steps {
+                sh 'echo "Starting the project!"'
+            }
+        }
+        stage('Lint HTML') {
+            steps {
+                sh 'tidy -q -e *.html'
+            }
+        }
+	    stage('Security Scan') {
+            steps {
+                 aquaMicroscanner imageName: 'alpine:latest', notCompliesCmd: 'exit 1', onDisallowed: 'fail', outputFormat: 'html' 
+            }
+        }         
+        stage('Upload to AWS') {
+            steps {
+                withAWS(region:'eu-central-1',credentials:'devops') {
+                sh 'echo "Uploading to AWS"'
+                s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'CloudDevOps-ND-Capstone')
+                }
+            }
+        }
+	    stage('Building docker image') {
+		    steps {
+			    sh 'docker build -t CloudDevOps-ND-Capstone .'			
+	    	}
+	    }
+	    stage('Push docker image to docker-hub') {
+		    steps {
+			    withDockerRegistry([url: "", credentialsId: "docker-hub"]){
+	        	    sh "docker tag CloudDevOps-ND-Capstone bkocis/CloudDevOps-ND-Capstone"
+			        sh "docker push bkocis/CloudDevOps-ND-Capstone"
+			    }
+            }
+		}
+    }
+}
