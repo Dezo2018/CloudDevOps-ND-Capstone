@@ -20,7 +20,7 @@ pipeline {
             steps {
                 withAWS(region:'eu-central-1',credentials:'devops') {
                 sh 'echo "Uploading to AWS"'
-                s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'CloudDevOps-ND-Capstone')
+                s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'clouddevops-nd-capstone')
                 }
             }
         }
