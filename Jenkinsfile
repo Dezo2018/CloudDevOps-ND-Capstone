@@ -25,8 +25,8 @@ pipeline {
             }
         }
 	    stage('Building docker image') {
-		    steps {
-			    sh 'docker build -t clouddevops-nd-apstone .'			
+		    steps withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker_id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
+			    sh 'docker build -t clouddevops-nd-capstone .'			
 	    	}
 	    }
 	    stage('Push docker image to docker-hub') {
