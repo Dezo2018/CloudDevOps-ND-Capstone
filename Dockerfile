@@ -1,7 +1,13 @@
-FROM nginx:latest
+FROM python:3.7.3-stretch
 
-# Copy source code to working directory
-COPY index.html /usr/share/nginx/html
+# Working Directory
+WORKDIR /app
 
-# Expose port 80
-EXPOSE 80
+COPY . app.py /app/
+
+
+RUN pip install -r requirements.txt
+
+EXPOSE 8081
+
+CMD ["python", "app.py"]
