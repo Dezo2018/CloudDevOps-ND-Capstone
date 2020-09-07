@@ -12,6 +12,14 @@ The continuous integration and deplyment are tracked by a Jenkins pipeline.
     - Dockerfile
     - web app
 
+
+Jenkinsfile modification
+added linting for python pylint, 
+- installed it on the jenkins instance pip3 install pylint (no virtual env.), 
+- installed "violations" jenkins plugin for pylint, 
+- added a stage with syntax:
+    `pylint --rcfile=pylint.cfg $(find . -maxdepth 1 -name "*.py" -print) MYMODULE/ > pylint.log || exit 0`
+
 ## Setting up
 Running as cloud-native development from AWS Cloud9.
 
