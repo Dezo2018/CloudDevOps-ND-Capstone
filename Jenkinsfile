@@ -25,7 +25,7 @@ pipeline {
             }
         }
 	    stage('Building docker image') {
-		    steps withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker_id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
+		    steps withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'bkocisdocker', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
 			    sh 'docker build -t clouddevops-nd-capstone .'			
 	    	}
 	    }
