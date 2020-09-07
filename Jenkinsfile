@@ -25,8 +25,9 @@ pipeline {
             }
         }
 	    stage('Building docker image') {
+	        steps {
 			    sh 'docker build -t clouddevops-nd-capstone .'			
-	    
+	        }
 	    }
 	    stage('Push docker image to docker-hub') {
 		    steps {
