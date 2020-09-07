@@ -31,7 +31,7 @@ pipeline {
 	    }
 	    stage('Push docker image to docker-hub') {
 		    steps {
-			    withDockerRegistry([url: "", credentialsId: "docker-hub"]){
+			    withDockerRegistry([url: "", credentialsId: "bkocisdocker"]){
 	        	    sh "docker tag CloudDevOps-ND-Capstone bkocis/CloudDevOps-ND-Capstone"
 			        sh "docker push bkocis/CloudDevOps-ND-Capstone"
 			    }
