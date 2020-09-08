@@ -14,7 +14,6 @@ pipeline {
         stage('Lint flask python app') {
             steps {
                 sh '''
-                    source /home/ubuntu/.capstone/bin/activate
                     pylint --rcfile=pylint.cfg --disable=R,C,W1203,W1202 app.py
                 '''
             }
