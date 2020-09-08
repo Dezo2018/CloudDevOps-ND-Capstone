@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Lint flask python app') {
             steps {
-                sh 'pylint --rcfile=pylint.cfg $(find . -maxdepth 1 -name "*.py" -print) MYMODULE/ > pylint.log || exit 0'
+                sh 'pylint --disable=R,C,W1203,W1202 app.py'
             }
         }
 	    stage('Security Scan') {
