@@ -14,6 +14,7 @@ pipeline {
         stage('Lint flask python app') {
             steps {
                 sh '''
+                    apt-get install python-pip
                     pip install flask
                     pylint --disable=R,C,W1203,W1202 app.py
                 '''
