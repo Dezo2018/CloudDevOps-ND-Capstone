@@ -5,7 +5,7 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def simple_index()
+def simple_index():
     return("Simple page deployed!")
 
 if __name__=="__main__":

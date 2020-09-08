@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Lint flask python app') {
             steps {
-                sh 'pylint --disable=R,C,W1203,W1202 app.py'
+                sh 'pylint --rcfile=pylint.cfg --disable=R,C,W1203,W1202 app.py'
             }
         }
 	    stage('Security Scan') {
