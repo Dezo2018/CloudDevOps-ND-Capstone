@@ -15,6 +15,7 @@ pipeline {
             steps {
                 sh '''
                     python --version
+                    apt install python-pip
                     pip install flask
                     pylint --disable=R,C,W1203,W1202 app.py || exit 0
                 '''
