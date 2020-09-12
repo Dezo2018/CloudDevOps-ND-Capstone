@@ -28,7 +28,7 @@ pipeline {
         }         
         stage('Upload to AWS') {
             steps {
-                withAWS(region:'eu-central-1',credentials:'devops') {
+                withAWS(region:'eu-central-1',credentials:'jenkins3-capstone_user_credentials') {
                 sh 'echo "Uploading to AWS"'
                 s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'clouddevops-nd-capstone')
                 }
