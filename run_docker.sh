@@ -15,4 +15,4 @@ docker build --tag=capstone .
 
 docker image ls
 
-docker run -p 8000:8000 capstone
+docker run -p 8081:8081 capstone
