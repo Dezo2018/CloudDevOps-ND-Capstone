@@ -1,7 +1,7 @@
 
-[![Build Status](http://http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/buildStatus/icon?job=CloudDevOps-ND-Capstone%2Fmaster)](http://http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/)
+[![Build Status](http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/buildStatus/icon?job=CloudDevOps-ND-Capstone%2Fmaster)](http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/)
 
-[![Build Status](http://http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/badge/icon?)](http://http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/)
+[![Build Status](http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/badge/icon?)](http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/)
 
 # Deploying a containerised flask app on AWS Elastic Kubernetes Service 
 
