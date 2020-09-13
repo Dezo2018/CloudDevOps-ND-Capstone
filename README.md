@@ -29,7 +29,6 @@ kubectl set image deployments/<DOCKER_IMAGE_NAME> <DOCKER_IMAGE_NAME>=bkocis/<DO
 
 ## Files
 
-- install_jenkins_instance.sh (installation required on the main instance running Jenkins)
 - Jenkinsfile
 - Dockerfile
 - run_Docker.sh
@@ -50,6 +49,7 @@ Other non-obligatory files, but good to have:
 Some steps are required such as defining a new user, policy, save keypairs (.pem files for ssh access very important). Create a single ec2 instance (I chose a Ubuntu 18.04 AMI). 
 
 #### Install Jenkins, Docker
+
 ```bash 
 sudo apt-get update
 sudo apt install -y default-jdk
