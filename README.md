@@ -1,7 +1,7 @@
 
 [![Build Status](http://ec2-3-127-81-170.eu-central-1.compute.amazonaws.com:8080/buildStatus/icon?job=CloudDevOps-ND-Capstone%2Fmaster)](http://ec2-3-127-81-170.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/)
 
-[![Build Status](http://ec2-3-127-81-170.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/badge/icon)](http://ec2-3-127-81-170.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/)
+[![Build Status](http://ec2-3-127-81-170.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/badge/icon?)](http://ec2-3-127-81-170.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/)
 
 # Kubernetes-Docker-Jenkins-AWS deployment
 
@@ -49,7 +49,6 @@ Running as cloud-native development from AWS Cloud9.
 <img src="screenshots/deployed-flask-app.png" width=60%>
 
 
-
 <img src="screenshots/load-balancer.png" width=60%>
 
 
@@ -61,7 +60,8 @@ Running as cloud-native development from AWS Cloud9.
 
 <img src="screenshots/log-rollout.png" width=60%>
 
-<img src="screenshots/unit-testing-flsk-app.png" width=60%>
+
+<img src="screenshots/unit-testing-flask-app.png" width=60%>
 
 
 
