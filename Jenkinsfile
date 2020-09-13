@@ -21,7 +21,9 @@ pipeline {
                     python --version
                     pip install --upgrade --user pip
                     pip install -r requirements.txt
+                    sudo apt-get install pylint
                     pylint --disable=R,C,W1203,W1202 app.py || exit 0
+                    ./test/py
                 '''
                 }
             }
