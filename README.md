@@ -1,6 +1,8 @@
 
 [![Build Status](http://ec2-3-127-81-170.eu-central-1.compute.amazonaws.com:8080/buildStatus/icon?job=CloudDevOps-ND-Capstone%2Fmaster)](http://ec2-3-127-81-170.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/)
 
+[![Build Status](http://ec2-3-127-81-170.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/badge/icon)](http://ec2-3-127-81-170.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/)
+
 # Kubernetes-Docker-Jenkins-AWS deployment
 
 ## Description 
