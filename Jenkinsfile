@@ -19,7 +19,7 @@ pipeline {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
                 sh '''
                     python --version
-                    pip install --upgrade pip
+                    pip install --upgrade --user pip
                     pip install -r requirements.txt
                     pylint --disable=R,C,W1203,W1202 app.py || exit 0
                 '''
