@@ -17,7 +17,8 @@ pipeline {
             agent { docker { image 'python:3.7.2' } }
             steps {
                 sh '''
-                    #python --version
+                    python --version
+                    pip install -r requirements.txt
                     #apt install python-pip
                     #pip install flask
                     pylint --disable=R,C,W1203,W1202 app.py || exit 0
@@ -31,6 +32,7 @@ pipeline {
             }
         }         
         stage('Upload to AWS') {
+            agent any
             steps {
                 withAWS(region:'eu-central-1',credentials:'jenkins3-capstone_user_credentials') {
                 sh 'echo "Uploading to AWS"'
@@ -39,11 +41,13 @@ pipeline {
             }
         }
 	    stage('Building docker image') {
+	        agent any
 	        steps {
 			    sh 'docker build -t clouddevops-capstone .'			
 	        }
 	    }
 	    stage('Push docker image to docker-hub') {
+	        agent any
 		    steps {
 			    withDockerRegistry([url: "", credentialsId: "bkocisdocker"]){
 			        sh "docker tag clouddevops-capstone bkocis/clouddevops-capstone:latest"
@@ -52,6 +56,7 @@ pipeline {
             }
 		}
         stage('Deploy to AWS EKS') {
+            agetn any
               steps{
                   withAWS(credentials: 'jenkins3-capstone_user_credentials', region: 'eu-central-1') {
                     sh "aws eks --region eu-central-1 update-kubeconfig --name capstone"
