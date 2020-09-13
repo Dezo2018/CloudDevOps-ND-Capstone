@@ -1,3 +1,5 @@
+[![Build Status](http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/23/)](http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/23/)
+
 # Kubernetes-Docker-Jenkins-AWS deployment
 
 ## Description 
@@ -36,5 +38,27 @@ Running as cloud-native development from AWS Cloud9.
     - Jenskins-on-the-server setup
         -
         -
+
+<img src="screenshots/instances.png" width=60%>
+
+
+
+<img src="screenshots/deployed-flask-app.png" width=60%>
+
+
+
+<img src="screenshots/load-balancer.png" width=60%>
+
+
+<img src="screenshots/security-group-inbound-rules.png" width=60%>
+
+
+<img src="screenshots/jenkins-pipeline.png" width=60%>
+
+
+<img src="screenshots/log-rollout.png" width=60%>
+
+
+
 
 
