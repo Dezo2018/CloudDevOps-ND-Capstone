@@ -23,7 +23,7 @@ pipeline {
                     pip install -r requirements.txt
                     #apt-get install -y pylint
                     #pylint --disable=R,C,W1203,W1202 app.py || exit 0
-                    ./test/py
+                    python test.py
                 '''
                 }
             }
