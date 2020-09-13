@@ -19,10 +19,8 @@ pipeline {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
                 sh '''
                     python --version
-                    #chmod +x /.cache/pip/
+                    pip install upgrade pip
                     pip install -r requirements.txt
-                    #apt install python-pip
-                    #pip install flask
                     pylint --disable=R,C,W1203,W1202 app.py || exit 0
                 '''
                 }
