@@ -47,5 +47,12 @@ pipeline {
 			    }
             }
 		}
+        stage('Deploy to AWS EKS') {
+              steps{
+                  withAWS(credentials: 'jenkins3-capstone_user_credentials', region: 'eu-central-1') {
+                    sh "aws eks --region eu-central-1 update-kubeconfig --name capstone"
+                  }
+              }
+        }		
     }
 }
