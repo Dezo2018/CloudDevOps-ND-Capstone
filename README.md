@@ -18,7 +18,7 @@ Jenkins automates and supports transparent building, testing, and deployment of 
 
 Further down the pipeline, the flask app is containerizes and uploaded to Docker-hub. The Docker image can be run separately via the `run_Docker.sh`, and can be made accessible using the public address of the instance.  
 
-For orchestration, scalability and availability the docket image containing the flask app can be deployed on a Kubernetes cluster. The deployment and running of the Docker image on the Kubernetes cluster requires the `deployment.yml` file for the configuration of the deployment type (in this case rolling) and service ports. At the end, the Docker image can be deployed on the cluster with a few commands encapsulated inside a single stage of the Jenkins pipeline: 
+For orchestration, scalability and availability the Docker image containing the flask app can be deployed on a Kubernetes cluster. The deployment and running of the Docker image on the Kubernetes cluster requires the `deployment.yml` file for the configuration of the deployment type (in this case rolling) and service ports. At the end, the Docker image can be deployed on the cluster with a few commands encapsulated inside a single stage of the Jenkins pipeline: 
 
 ```bash
 aws eks --region <REGION_NAME> update-kubeconfig --name <CLUSTER_NAME>
