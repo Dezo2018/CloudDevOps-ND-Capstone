@@ -1,17 +1,20 @@
 pipeline {
-    agent { docker { image 'python:3.7.2' } }
+    agent none
     stages {
         stage('Build start') {
+            agent any
             steps {
                 sh 'echo "Starting the project!"'
             }
         }
         stage('Lint HTML') {
+            agent any
             steps {
                 sh 'tidy -q -e *.html'
             }
         }
         stage('Lint flask python app') {
+            agent { docker { image 'python:3.7.2' } }
             steps {
                 sh '''
                     #python --version
@@ -22,6 +25,7 @@ pipeline {
             }
         }
 	    stage('Security Scan') {
+	        agent any
             steps {
                  aquaMicroscanner imageName: 'alpine:latest', notCompliesCmd: 'exit 1', onDisallowed: 'fail', outputFormat: 'html' 
             }
