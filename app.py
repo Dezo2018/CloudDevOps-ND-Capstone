@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def simple_index():
-    return("Simple page deployed!")
+    return("Simple page successfully deployed!")
 
 if __name__=="__main__":
     app.run(host="0.0.0.0", port=8081, debug=True)
