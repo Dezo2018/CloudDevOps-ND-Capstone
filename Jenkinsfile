@@ -53,7 +53,7 @@ pipeline {
                     sh "aws eks --region eu-central-1 update-kubeconfig --name capstone"
                     sh "kubectl config use-context arn:aws:eks:eu-central-1:643112058200:cluster/capstone"
                     sh "kubectl get nodes"
-                    sh "kubectl set image clouddevops-capstone clouddevops-capstone=bkocis/clouddevops-capstone:latest"
+                    sh "kubectl set image deployments/clouddevops-capstone clouddevops-capstone=bkocis/clouddevops-capstone:latest"
                   }
               }
         }		
