@@ -21,8 +21,8 @@ pipeline {
                     python --version
                     pip install --upgrade --user pip
                     pip install -r requirements.txt
-                    apt-get install -y pylint
-                    pylint --disable=R,C,W1203,W1202 app.py || exit 0
+                    #apt-get install -y pylint
+                    #pylint --disable=R,C,W1203,W1202 app.py || exit 0
                     ./test/py
                 '''
                 }
@@ -38,7 +38,6 @@ pipeline {
             agent any
             steps {
                 withAWS(region:'eu-central-1',credentials:'jenkins3-capstone_user_credentials') {
-                sh 'echo "Uploading to AWS"'
                 s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'clouddevops-nd-capstone')
                 }
             }
