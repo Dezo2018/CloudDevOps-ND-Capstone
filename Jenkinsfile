@@ -56,6 +56,9 @@ pipeline {
                     sh "kubectl get deployments"
                     sh "kubectl apply -f deployment.yml"
                     sh "kubectl set image deployments/clouddevops-capstone clouddevops-capstone=bkocis/clouddevops-capstone:latest"
+                    sh "kubectl get deployments"
+                    sh "kubectl rollout status deployments/clouddevops"
+                    sh "kubectl get service/clouddevops-capstone"
                   }
               }
         }		
