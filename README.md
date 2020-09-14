@@ -3,7 +3,7 @@
 
 [![Build Status](http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/badge/icon?)](http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/)
 
-[Github Repo](https://github.com/bkocis/CloudDevOps-ND-Capstone)
+[Github Repo of the project](https://github.com/bkocis/CloudDevOps-ND-Capstone)
 
 #### Cloud DevOps Engineer Udacity Nanodegree Capstone Project
 -----
