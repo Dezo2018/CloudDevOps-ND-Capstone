@@ -3,6 +3,8 @@
 
 [![Build Status](http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/badge/icon?)](http://ec2-52-59-242-134.eu-central-1.compute.amazonaws.com:8080/job/CloudDevOps-ND-Capstone/job/master/)
 
+[Github Repo](https://github.com/bkocis/CloudDevOps-ND-Capstone)
+
 #### Cloud DevOps Engineer Udacity Nanodegree Capstone Project
 -----
 # Deploying a Docker containerized Flask app on AWS Elastic Kubernetes Service 
@@ -59,7 +61,6 @@ sudo apt-get update
 sudo apt-get install -y jenkins
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
-sudo systemctl status jenkins
 sudo apt install tidy
 sudo apt-get install docker.io
 sudo usermod -a -G docker ubuntu
@@ -74,7 +75,7 @@ sudo usermod -a -G docker jenkins
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip 
 sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
-# aws configure 
+# aws configure # use non-root user
 
 # eksctl
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
