@@ -12,7 +12,7 @@
 
 ## Description 
 
-The project in this repository is about deployment and integration of a flask app using Jenkins, Docker, and Kubernetes. A simple flask app is used for containerization, deployment, testing in a pipeline, and finally for deploying into a Kubernetes cluster for high availability with a publicly available URL. For the later part AWS's EKS (Elastic Kubernetes Service) was used to generate a cluster of 3 instances, load balancer, and all necessary settings. 
+The project in this repository is about continuous deployment and integration of a simple flask app using Jenkins, Docker, and Kubernetes. The flask app is tested, containerized, and deployment from a Jenkins pipeline. In the final stage the docker image is deployed into a Kubernetes cluster and made accressible with a public URL. For the later part AWS's EKS (Elastic Kubernetes Service) was used to generate a cluster of 3 instances, load balancer, and all necessary settings. 
 
 The generation and operation of the Kubernetes cluster takes place on the master instance, in this case on the same instance where Jenkins is installed. 
 
